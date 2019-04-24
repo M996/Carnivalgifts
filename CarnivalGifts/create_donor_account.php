@@ -12,8 +12,8 @@
   <div class="make-payment-form">
     <form action= "account_process.php" method="post">
       <div class="form-row-pay">
-        <input type="text" name="firstnamedonor" value="First Name" class="input-spacing"/>
-        <input type="text" name="lastnamedonor" value="Last Name" class="input-spacing"/>
+        <input type="text" name="firstnamedonor" placeholder="First Name" class="input-spacing" required/>
+        <input type="text" name="lastnamedonor" placeholder="Last Name" class="input-spacing" required/>
       </div>
       <div class="form-row-pay">
         <input type="radio" name="payment-type" id="mastercard" value="Mastercard">
@@ -26,17 +26,17 @@
          <label for="paypal">Paypal</label>
       </div>
       <div class="form-row-pay-card">
-        <input type="text" name="cardnumber" value="Card Number" class="cardnumber-pay"/>
-        <input type="text" name="expiration" value="Expiration Date" class="expiration-pay"/>
-        <input type="text" name="cvs" value="CVS number" class="expiration-pay"/>
+        <input type="text" name="cardnumber" placeholder="Card Number" class="cardnumber-pay"/>
+        <input type="text" name="expiration" placeholder="Expiration Date" class="expiration-pay"/>
+        <input type="text" name="cvs" placeholder="CVS number" class="expiration-pay"/>
       </div>
       <div class="form-row-pay">
-        <input type="text" name="email" value="Email" class="input-spacing"/>
-        <input type="text" name="phone" value="Phone" class="input-spacing"/>
+        <input type="text" name="email" placeholder="Email" class="input-spacing" required/>
+        <input type="text" name="phone" placeholder="Phone" class="input-spacing" required/>
       </div>
       <div class="form-row-pay">
-        <input type="text" name="password" value="Password" class="input-spacing"/>
-        <input type="text" name="passwordre" value="Repeat Password" class="input-spacing"/>
+        <input type="password" name="password" placeholder="Password" class="input-spacing" required/>
+        <input type="password" name="passwordre" placeholder="Repeat Password" class="input-spacing" required/>
       </div>
         <div class="form-row-pay">
       <input type="submit" name="Submit" value="Save Account" />

@@ -10,17 +10,17 @@
     <img src="src/images/Small_Advert1.png" class="small-advert1">
   </div>
   <div class="create-account-form">
-    <form action="submit">
-      <input type="text" name="firstname1" value="First Name" class="account-form-input">
-      <input type="text" name="lastname1" value="Last Name" class="account-form-input"><br>
-      <input type="text" name="firstname2" value="First Name (optional)" class="account-form-input">
-      <input type="text" name="lastname2" value="Last Name (optional)" class="account-form-input"><br>
-      <input type="text" name="bankname" value="Bank Name" class="account-form-input">
-      <input type="text" name="bankaccount" value="Bank Account Number" class="account-form-input"><br>
-      <input type="email" name="email" value="Email" class="account-form-input">
-      <input type="phone" name="phone" value="Phone Number" class="account-form-input"><br>
-      <input type="text" name="password" value="Password" class="account-form-input">
-      <input type="text" name="passwordre" value="Re-Enter Password" class="account-form-input"><br><br><br>
+    <form action="ben_account_process.php" method="post">
+      <input type="text" name="firstname1" placeholder="First Name" class="account-form-input" required>
+      <input type="text" name="lastname1" placeholder="Last Name" class="account-form-input" required><br>
+      <input type="text" name="firstname2" placeholder="First Name (optional)" class="account-form-input">
+      <input type="text" name="lastname2" placeholder="Last Name (optional)" class="account-form-input"><br>
+      <input type="text" name="bankname" placeholder="Bank Name" class="account-form-input" required>
+      <input type="text" name="bankaccount" placeholder="Bank Account Number" class="account-form-input" required><br>
+      <input type="email" name="email" placeholder="Email" class="account-form-input" required>
+      <input type="phone" name="phone" placeholder="Phone Number" class="account-form-input" required><br>
+      <input type="password" name="password1" placeholder="Password" class="account-form-input" required>
+      <input type="password" name="passwordre1" placeholder="Re-Enter Password" class="account-form-input" required><br><br><br>
       <button type="submit" method="post" class="account-creation-button">Start an Experience!</button>
     </form>
   </div>
