@@ -1,0 +1,105 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-homepage {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 5px;
+}
+
+.banner-image-home {
+  width: 100%;
+  height: auto;
+}
+
+.banner-buttons {
+  margin-top: -60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-account-button-div {
+  margin: auto 20px;
+  align-items: center;
+}
+
+.create-account-button {
+  padding: 15px 30px;
+  background-color: rgb(180,20,20);
+  border-radius: 50px;
+  color: white;
+  font-weight: bolder;
+}
+
+.donate-button {
+  padding: 15px 55px;
+  background-color: rgb(180,20,20);
+  border-radius: 50px;
+  color: white;
+  font-weight: bolder;
+}
+
+.negative-margin-text {
+  margin-top: -15px;
+  margin-left: 16%;
+  font-size: 8px;
+  color: gold;
+  font-weight: bolder;
+}
+
+.homepage-destinations {
+  background-color: silver;
+  border-top: 4px solid grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-destinations-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 2%;
+}
+
+.seperation-div-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-destination-img {
+  width: 400px;
+}
+
+.destination-negative-margin {
+    margin-top: -18px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-container-home {
+  margin-top: -5%;
+  width: 70%;
+  height: auto;
+}
+
+.homepage-destination-text {
+    margin-left: 22%;
+    margin-right: auto;
+}
+
+.homepage-destination-img {
+  width: 432px;
+}

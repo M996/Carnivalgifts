@@ -1,0 +1,41 @@
+.review-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(180,200,240);
+}
+
+.line-row-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32%
+}
+
+.review-box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+}
+
+.review-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.review-title {
+  margin-bottom: 5%;
+  font-size: 26px;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+.review-text {
+  font-style: italic;
+}

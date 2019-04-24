@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Apr 8, 2019, 12:11:23 AM
+    Author     : Mitchell
+*/
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ background-color: rgb(50, 50, 145);
+ padding: 20px;
+}
+
+.blue-nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.homepage-button {
+  margin-left: 4px;
+  margin-right:auto;
+}
+
+.header-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 22px;
+}
+
+.header-profile-pic {
+  width: 44px;
+  height: auto;
+  margin: 0 14px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(150,250,200,0.95);
+  color: white;
+  padding: 12px;
+  font-size: 0.8rem;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(50,50,90,0.8);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgba(120,220,200,0.6);}
+
+.search-bar-form {
+  margin-right: 4px;
+  margin-left: auto;
+}
+
+.search-bar-header {
+  border: 1px solid blue;
+  border-radius: 20px;
+}
+
+.search-form {
+  border: 1px solid blue;
+  border-radius: 20px;
+}

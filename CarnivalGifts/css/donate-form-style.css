@@ -1,0 +1,63 @@
+.payment-form {
+  background-color: rgb(180,200,240);
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.make-payment-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1.5;
+  flex-shrink: 1.2;
+}
+
+.form-row-pay {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0.5 1.8 80%;
+  align-items:center;
+  justify-content: center;
+  margin: 6% 1%;
+}
+
+.form-row-pay-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items:center;
+  justify-content: flex-start;
+}
+
+.hidden-class{
+  display: none;
+}
+
+.amount-pay {
+  width: 60%;
+  height: 100%;
+  font-size: 2rem;
+  color: red;
+  margin: 10px;
+}
+
+.cardnumber-pay {
+  width: 80%;
+  font-style: italic;
+  margin-left: 14%;
+  margin-right: auto;
+}
+
+.expiration-pay {
+  width: 10%;
+  font-style: italic;
+  margin-left: 14%;
+  margin-right: auto;
+}
+
+
+.input-spacing {
+    margin: 2% 6%;
+    border-radius: 8px;
+}
