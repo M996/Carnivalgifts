@@ -21,15 +21,15 @@
         OR Spouse_L_Name = '$searchterm';";
 
         $search_results = mysqli_query($db, $SQL_Search);
-
-
+        
+        
         foreach ($search_results as $new_search) {
-
+        
         $fname1 = $new_search['beneficiary_F_Name'];
         $lname1 = $new_search['beneficiary_L_Name'];
         $fname2 = $new_search['Spouse_F_Name'];
         $lname2 = $new_search['Spouse_L_Name'];
-
+       
 
       echo '<div class="donor-search-row">
       <img src="src/images/Profile_Pic.png" class="profile-pic">

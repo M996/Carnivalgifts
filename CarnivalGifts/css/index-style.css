@@ -101,6 +101,6 @@ body {
     margin-right: auto;
 }
 
-.homepage-destination-img {
+.homepage-destination-img:hover {
   width: 432px;
 }

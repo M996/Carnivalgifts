@@ -29,7 +29,8 @@
   justify-content: center;
   align-items: center;
   margin: 0 8px;
-  height: 360px;
+  width: 44%;
+  height: auto;
 }
 
 .cruise-name-title {
@@ -45,8 +46,10 @@
 }
 
 .cruise-cost {
-  font-size: 1.2rem;
-  color: gold;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(120,80,20);
 }
 
 .cruise-destination {
