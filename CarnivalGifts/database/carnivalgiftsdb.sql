@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2019 at 02:36 AM
+-- Generation Time: Apr 27, 2019 at 02:09 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -41,6 +41,16 @@ CREATE TABLE `beneficiary` (
   `password` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `beneficiary`
+--
+
+INSERT INTO `beneficiary` (`beneficiaryID`, `beneficiary_F_Name`, `beneficiary_L_Name`, `Spouse_F_Name`, `Spouse_L_Name`, `bank_name`, `account_number`, `email`, `phone`, `password`) VALUES
+(1, 'Mikey', 'Boy', '', '', 'Huntington', 12345, 'Mikeyboy99@hotmail.com', '231-554-6869', 'Passwordgoat'),
+(2, 'Mikey', 'Boy', 'Nancey', 'Drew', 'Huntington', 12345, 'Mikeyboy99@hotmail.com', '231-554-6869', 'Passwordgoat'),
+(3, 'Jim', 'Manick', 'Karol', 'James', 'Independent Bank', 657690, 'Karol@yahoo.com', '231-554-7901', 'softpassword'),
+(4, 'Katy', 'Hopper', 'Jim', 'Kelton', 'Huntington', 4591526, 'Katy@butterflies.com', '231-414-7953', 'katyspassword');
+
 -- --------------------------------------------------------
 
 --
@@ -50,11 +60,27 @@ CREATE TABLE `beneficiary` (
 CREATE TABLE `cruise` (
   `cruise_num` int(16) NOT NULL,
   `room_num` int(4) NOT NULL,
-  `destination` varchar(64) NOT NULL,
-  `cost` decimal(10,0) NOT NULL,
+  `destinationCountry` varchar(64) NOT NULL,
+  `destinationCity` varchar(64) NOT NULL,
+  `picture` varchar(50) NOT NULL,
+  `cost` decimal(10,2) NOT NULL,
   `cruise_name` varchar(64) NOT NULL,
-  `taken` tinyint(1) DEFAULT NULL
+  `taken` enum('YES','NO') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cruise`
+--
+
+INSERT INTO `cruise` (`cruise_num`, `room_num`, `destinationCountry`, `destinationCity`, `picture`, `cost`, `cruise_name`, `taken`) VALUES
+(3, 202, 'Japan', 'Tokyo', 'Tokyo.jpg', '2200.00', 'Tokyo Drift', 'NO'),
+(4, 115, 'Philippines', 'Manilla', 'Destination2.jpg', '1100.00', 'Manilla Tour', 'YES'),
+(5, 213, 'Jamaica', 'Kingston', 'Destination1.jpg', '800.00', 'Kingston Tour', 'NO'),
+(6, 101, 'Bora Bora', 'Vaitape', 'Destination2.jpg', '1501.00', 'Bora Bora Luxury Cruise', 'NO'),
+(7, 112, 'Bora Bora', 'Vaitape', 'Destination2.jpg', '1500.00', 'Bora Bora Luxury Cruise', 'NO'),
+(8, 260, 'Panama', 'Panama City', 'Destination2.jpg', '3200.25', 'Panama Luxury Cruise', 'NO'),
+(9, 205, 'Italy', 'Venice', 'Destination3.jpg', '2500.10', 'Venice Tour', 'NO'),
+(10, 181, 'Italy', 'Naples', 'Destination3.jpg', '1825.50', 'Naples Tour', 'NO');
 
 -- --------------------------------------------------------
 
@@ -99,6 +125,17 @@ CREATE TABLE `donor` (
   `password` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `donor`
+--
+
+INSERT INTO `donor` (`donorID`, `donor_F_Name`, `donor_L_Name`, `pay_type`, `card_number`, `expiration`, `cvs`, `email`, `phone`, `password`) VALUES
+(1, 'John', 'Smith', 'Visa', '1234567890112233', '04/45', 543, 'Johnnyboy@protonmail.com', '12315657923', 'Passwordguppy'),
+(2, 'Mitchell', 'Suchner', 'Mastercard', '546784568458', '457', 678, 'Mitchell_J_S@outlook.com', '1234149999', 'Password123'),
+(3, 'Mitchell', 'Suchner', 'Mastercard', '345634756734734', '4567', 456, 'Mitchell_J_S@outlook.com', '1234149999', 'Password123'),
+(4, '', '', '', '', '', 0, '', '', ''),
+(5, 'Hermes', 'Conrad', 'Paypal', '', '', 0, 'Hermes@PlanetExpress.net', '9999999999', 'Jamaica');
+
 -- --------------------------------------------------------
 
 --
@@ -108,10 +145,24 @@ CREATE TABLE `donor` (
 CREATE TABLE `item` (
   `item_id` int(16) NOT NULL,
   `item_name` varchar(64) NOT NULL,
-  `item_cost` decimal(10,0) NOT NULL,
+  `item_cost` decimal(10,2) NOT NULL,
   `item_desc` text NOT NULL,
-  `cruise_num` int(16) NOT NULL
+  `picture` varchar(32) NOT NULL,
+  `destinationCity` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`item_id`, `item_name`, `item_cost`, `item_desc`, `picture`, `destinationCity`) VALUES
+(1, 'Sushi Restaurant Reservations', '120.00', 'Purchase reservations at one of the best Sushi restaurants in Tokyo.', 'sushi.jpg', 'Tokyo'),
+(2, 'Reservations at Seafood Restaurant', '100.00', 'Purchase reservations at one of the best seafood restaurants in Kingston Jamaica.', 'seafood.jpg', 'Kingston'),
+(3, 'Jet Ski Rental', '200.00', 'Rent a Jet Ski at any of our destinations for use the entire day.', 'jet-ski.jpg', 'ALL'),
+(4, 'Three Course Meal for Two', '80.00', 'Pay for one three course meal for the couple at any time they are aboard the ship.', 'meal.jpg', 'ALL'),
+(5, 'Bora Bora Scuba Diving', '200.00', 'Pay for a scuba diving trip in Bora Bora for two people.', 'scuba.jpg', 'Vaitape'),
+(6, 'Italian Restaurant Reservations', '145.50', 'Pay for reservations to one of the best restaurants in Venice for two people.', 'wine.png', 'Venice'),
+(7, 'Wine Tasting', '80.00', 'Purchase a wine tasting trip for two people in Naples, Italy.', 'grapes.jpg', 'Naples');
 
 -- --------------------------------------------------------
 
@@ -169,7 +220,7 @@ ALTER TABLE `donor`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`item_id`),
-  ADD KEY `cruise_num` (`cruise_num`);
+  ADD KEY `cruise_num` (`destinationCity`);
 
 --
 -- Indexes for table `item_order`
@@ -187,13 +238,13 @@ ALTER TABLE `item_order`
 -- AUTO_INCREMENT for table `beneficiary`
 --
 ALTER TABLE `beneficiary`
-  MODIFY `beneficiaryID` int(18) NOT NULL AUTO_INCREMENT;
+  MODIFY `beneficiaryID` int(18) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cruise`
 --
 ALTER TABLE `cruise`
-  MODIFY `cruise_num` int(16) NOT NULL AUTO_INCREMENT;
+  MODIFY `cruise_num` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `cruise_order`
@@ -211,13 +262,13 @@ ALTER TABLE `donation`
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `donorID` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `donorID` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `item_id` int(16) NOT NULL AUTO_INCREMENT;
+  MODIFY `item_id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `item_order`
