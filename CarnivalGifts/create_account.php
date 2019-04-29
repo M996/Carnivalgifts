@@ -11,8 +11,9 @@
   </div>
   <div class="create-account-form">
     <form action="ben_account_process.php" method="post">
-      <input type="text" name="firstname1" placeholder="First Name" class="account-form-input" required>
-      <input type="text" name="lastname1" placeholder="Last Name" class="account-form-input" required><br>
+      <div>
+      <input type="text" name="firstname1" placeholder="First Name" class="input-spacing" required>
+      <input type="text" name="lastname1" placeholder="Last Name" class="input-spacing" required></div><br>
       <input type="text" name="firstname2" placeholder="First Name (optional)" class="account-form-input">
       <input type="text" name="lastname2" placeholder="Last Name (optional)" class="account-form-input"><br>
       <input type="text" name="bankname" placeholder="Bank Name" class="account-form-input" required>

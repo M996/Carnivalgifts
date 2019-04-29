@@ -37,7 +37,6 @@ if ($password_ben === $passwordre_ben && $password_ben != NULL) {
 
   require 'config.php';
   include 'header.php';
-  echo "$password_ben , $passwordre_ben";
   $SQL_Query_ben = "INSERT INTO beneficiary VALUES ('','$fname1','$lname1','$fname2','$lname2','$bankname','$bankaccount','$email_ben','$phone_ben','$password_ben')";
   global $db;
   mysqli_query($db, $SQL_Query_ben);

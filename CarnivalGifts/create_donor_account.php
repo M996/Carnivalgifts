@@ -27,8 +27,8 @@
       </div>
       <div class="form-row-pay-card">
         <input type="text" name="cardnumber" placeholder="Card Number" class="cardnumber-pay"/>
-        <input type="text" name="expiration" placeholder="Expiration Date" class="expiration-pay"/>
-        <input type="text" name="cvs" placeholder="CVS number" class="expiration-pay"/>
+        <input type="text" name="expiration" placeholder="MM/YY" class="expiration-pay"/>
+        <input type="text" name="cvs" placeholder="CVC" class="expiration-pay"/>
       </div>
       <div class="form-row-pay">
         <input type="text" name="email" placeholder="Email" class="input-spacing" required/>

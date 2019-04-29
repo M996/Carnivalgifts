@@ -16,20 +16,21 @@
       $searchterm = $_REQUEST['searchbar'];
       require 'config.php';
 
-        $SQL_Search = "SELECT beneficiary_F_Name, beneficiary_L_Name, Spouse_F_Name, Spouse_L_Name FROM beneficiary
+        $SQL_Search = "SELECT beneficiaryID, beneficiary_F_Name, beneficiary_L_Name, Spouse_F_Name, Spouse_L_Name FROM beneficiary
         WHERE  beneficiary_F_Name = '$searchterm' OR beneficiary_L_Name = '$searchterm' OR Spouse_F_Name = '$searchterm'
         OR Spouse_L_Name = '$searchterm';";
 
         $search_results = mysqli_query($db, $SQL_Search);
-        
-        
+
+
         foreach ($search_results as $new_search) {
-        
+
         $fname1 = $new_search['beneficiary_F_Name'];
         $lname1 = $new_search['beneficiary_L_Name'];
         $fname2 = $new_search['Spouse_F_Name'];
         $lname2 = $new_search['Spouse_L_Name'];
-       
+        $new_ben_id = $new_search['beneficiaryID'];
+
 
       echo '<div class="donor-search-row">
       <img src="src/images/Profile_Pic.png" class="profile-pic">
@@ -46,7 +47,14 @@
                 </div>
               </div>
               <div class="search-donate-button">
-                <a href="donate_form.php"<button type="button" class="shizzle">Donate</button></a>
+                <form method="post" action="donate_form.php">
+                  <input style="display: none;" value="' . $fname1 .'" name="fname1">
+                  <input style="display: none;" value="' . $lname1 .'" name="lname1">
+                  <input style="display: none;" value="' . $fname2 .'" name="fname2">
+                  <input style="display: none;" value="' . $lname2 .'" name="lname2">
+                  <input style="display: none;" value="' . $new_ben_id .'" name="ben-id">
+                 <button type="submit" method="post" class="shizzle">Donate</button>
+                </form>
               </div>
               <div class="advert-holder-donate">
                 <img src="src/images/Small_Advert1.png" class="small-advert1">

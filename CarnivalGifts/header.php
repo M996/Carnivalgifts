@@ -13,6 +13,11 @@
   <link rel="stylesheet" type="text/css" href="css/reviews-style.css">
   <link rel="stylesheet" type="text/css" href="css/donate-form-style.css">
 </head>
+<?php
+
+  session_start();
+
+?>
 <body>
   <div class="header-menu">
       <a href="index.php" class="homepage-button"><img src="src/images/carnival-logo.png"></a>
