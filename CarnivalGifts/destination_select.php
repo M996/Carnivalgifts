@@ -1,16 +1,46 @@
 <?php include 'header.php' ?>
 
-<?php
+<?php // if the user is coming from the overview page or the item select page and they already have a cruise selected under their account, we must erase that cruise upon their entry to this page, thus allowing them to choose the same cruise or a new cruise.
+
+  if (isset($_SESSION['benID'])) {
+    $benID = $_SESSION['benID'];
+    require 'config.php';
+    $SQL_Query_Check = "SELECT order_id, cruise_num FROM cruise_order WHERE beneficiaryID = $benID;";
+    $find_order = mysqli_query($db, $SQL_Query_Check);
+    $row_count_order = $find_order->num_rows;
+    $erase_cruise_num = mysqli_fetch_array($find_order);
+
+    $cruisenum = $erase_cruise_num['cruise_num'];
+
+    if ($row_count_order > 0) {
+
+      $SQL_Set_Taken = "UPDATE cruise SET taken = 'NO' WHERE cruise_num = $cruisenum;";
+      mysqli_query($db, $SQL_Set_Taken);
+
+      $SQL_Delete = "DELETE FROM cruise_order WHERE beneficiaryID = $benID;";
+      mysqli_query($db, $SQL_Delete);
+
+
+    }
+
+  }
+
+?>
+
+<?php // If a Destination has been chosen, we will add it to the database using the code below, then redirect to the overview page.
 if (isset($_REQUEST['cruise-num'])) {
   $cruise_num = $_REQUEST['cruise-num'];
   $ben_ID = $_SESSION['benID'];
+  $cost = $_REQUEST['cost'];
 
   require 'config.php';
-  $SQL_Cruise_Order_Insert = "INSERT INTO cruise_order VALUES ('', '$cruise_num', '$ben_ID')";
-  global $db;
+  $SQL_Cruise_Order_Insert = "INSERT INTO cruise_order VALUES ('', '$cruise_num', '$ben_ID', '$cost')";
   mysqli_query($db, $SQL_Cruise_Order_Insert);
 
-  header("Location: http://localhost/MilestoneProject/overview.php"); /* Redirect browser */
+  $SQL_Remove_Room = "UPDATE cruise SET taken = 'YES' WHERE cruise_num = $cruise_num;";
+  mysqli_query($db, $SQL_Remove_Room);
+
+  header("Location: http://localhost/MilestoneProject/overview.php"); // Redirect browser
   exit();
 
 }  ?>
