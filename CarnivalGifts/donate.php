@@ -32,6 +32,7 @@
         $new_ben_id = $new_search['beneficiaryID'];
 
 
+
       echo '<div class="donor-search-row">
       <img src="src/images/Profile_Pic.png" class="profile-pic">
       <div class="donor-search-description">
@@ -53,7 +54,11 @@
                   <input style="display: none;" value="' . $fname2 .'" name="fname2">
                   <input style="display: none;" value="' . $lname2 .'" name="lname2">
                   <input style="display: none;" value="' . $new_ben_id .'" name="ben-id">
-                 <button type="submit" method="post" class="shizzle">Donate</button>
+                 <button type="submit" method="post" class="shizzle" style="margin-bottom: 8px;">Make Donation</button>
+                </form>
+                <form method="post" action="overview.php">
+                  <input style="display: none;" value="' . $new_ben_id .'" name="ben-id">
+                 <button type="submit" method="post" class="shizzle">View This Trip</button>
                 </form>
               </div>
               <div class="advert-holder-donate">

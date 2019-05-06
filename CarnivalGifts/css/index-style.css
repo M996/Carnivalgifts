@@ -27,6 +27,7 @@ body {
 .create-account-button-div {
   margin: auto 20px;
   align-items: center;
+  margin-right: 174px;
 }
 
 .create-account-button {
@@ -54,7 +55,6 @@ body {
 }
 
 .homepage-destinations {
-  background-color: silver;
   border-top: 4px solid grey;
   display: flex;
   flex-wrap: wrap;
@@ -80,14 +80,24 @@ body {
 
 .homepage-destination-img {
   width: 400px;
+  margin: 30px;
+}
+
+.homepage-destination-img:hover {
+  padding: 0px;
+  margin: 22px 0px;;
+  width: 430px;
 }
 
 .destination-negative-margin {
-    margin-top: -18px;
+    margin-top: -34px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgba(120,10,40,0.22);
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .text-container-home {
@@ -99,8 +109,4 @@ body {
 .homepage-destination-text {
     margin-left: 22%;
     margin-right: auto;
-}
-
-.homepage-destination-img:hover {
-  width: 432px;
 }

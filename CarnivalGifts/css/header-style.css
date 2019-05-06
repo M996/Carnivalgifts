@@ -51,7 +51,7 @@ and open the template in the editor.
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: rgba(150,250,200,0.95);
+  background-color: rgba(180,20,20,0.95);
   color: white;
   padding: 12px;
   font-size: 0.8rem;
@@ -89,7 +89,7 @@ and open the template in the editor.
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgba(120,220,200,0.6);}
+.dropdown:hover .dropbtn {background-color: rgba(150,10,10,0.80);}
 
 .search-bar-form {
   margin-right: 4px;

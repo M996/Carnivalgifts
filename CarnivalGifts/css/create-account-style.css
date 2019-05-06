@@ -34,12 +34,21 @@
 }
 
 .account-form-input {
-  margin: 10px;
+  margin: 28px;
+  border-radius: 8px;
 }
 
 .account-creation-button {
   border-radius: 20px;
-  border: 1px solid gold;
+  padding: 5px;
+  background-color: rgb(10,10,90);
+  color: white;
+  margin-bottom: 6px;
+}
+
+.account-creation-button:hover {
+  padding: 8px;
+  margin-bottom: 0px;
 }
 
 .create-account-images {

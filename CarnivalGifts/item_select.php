@@ -5,6 +5,7 @@ if (isset($_REQUEST['item-ID'])) {
 
   $currentID = $_SESSION['benID'];
   $chosen_item_ID = $_REQUEST['item-ID'];
+  $item_cost = $_REQUEST['price'];
 
   require 'config.php';
   $SQL_Search_Orders = "SELECT order_id FROM cruise_order WHERE  beneficiaryID = '$currentID';";
@@ -14,7 +15,7 @@ if (isset($_REQUEST['item-ID'])) {
 
   $current_order_id = $new_cruise_list['order_id'];
 
-  $SQL_Item_Order_Insert = "INSERT INTO item_order VALUES ('', '$current_order_id', '$chosen_item_ID')";
+  $SQL_Item_Order_Insert = "INSERT INTO item_order VALUES ('', '$current_order_id', '$chosen_item_ID', '$item_cost')";
   mysqli_query($db, $SQL_Item_Order_Insert);
 
   header("Location: http://localhost/MilestoneProject/overview.php"); /* Redirect browser */
@@ -75,7 +76,8 @@ if (isset($_REQUEST['item-ID'])) {
           <div class="item-list-info">
             <h3 class="item-list-cost">Cost: ' . $cost_item . '</h3>
             <form method="post" action="item_select.php">
-              <input style="display: none;" value="' . $item_ID .'" name="item-ID">
+              <input style="display: none;" value="' . $item_ID . '" name="item-ID">
+              <input style="display: none;" value="' . $cost_item . '" name="price">
                 <button name="choose-item" value="submit" type="submit" class="add-button-item">Add</button>
             </form>
           </div>

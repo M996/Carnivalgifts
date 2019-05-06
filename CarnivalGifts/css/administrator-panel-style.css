@@ -1,0 +1,117 @@
+.admin-tab-div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-bottom: solid 2px black;
+}
+
+.admin-tab {
+  padding: 18px;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  border: 3px solid rgb(40,5,5);
+  background-color: rgb(192,192,192);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: bolder;
+  margin-left: 80px;
+  border-bottom: none;
+  margin-top: 20px;
+}
+
+#current-admin-tab {
+  background-color: rgb(160,160,160)
+}
+
+.cruise-view-admin {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+  .cruise-view-admin {
+    flex-direction: column;
+    width: 98%;
+  }
+  #view-column-admin {
+    width: 98%;
+    border-right: none;
+    border-left: solid 1px black;
+  }
+    #final-column {
+      width: 98%;
+      border-right: none;
+      border-left: solid 1px black;
+    }
+  }
+
+.admin-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px rgb(180,20,20);
+}
+
+.admin-input {
+  border: solid 2px rgb(180,20,20);
+  border-radius: 10px;
+  margin: 1% 1.8%;
+  padding: 5px;
+}
+
+.view-column-admin {
+width: 20%;
+display: block;
+border-right: solid 1px black;
+}
+
+#final-column {
+  border-right: none;
+}
+
+.admin-view-name {
+  background-color: grey;
+  border: solid 2px rgb(180,200,240);
+}
+
+#right-size-admin {
+  height: 30px;
+}
+
+.admin-add {
+  background-color: gold;
+  color: white;
+  border: solid 2px black;
+  border-radius: 4px;
+}
+
+.admin-add:hover {
+  cursor: cell;
+}
+
+.admin-view-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminbar-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: silver;
+}
+
+.admin-info-text {
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-left: 10%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid grey;
+  margin-right: 10%;
+  padding-bottom: 8px;
+}

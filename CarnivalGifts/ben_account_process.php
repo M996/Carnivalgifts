@@ -44,7 +44,7 @@ if ($password_ben === $passwordre_ben && $password_ben != NULL) {
 
 
 } else {
-  echo "<h1>Your passwords do not match!</h1> <br> <a href='create_account.php'>Try Again with Matching Passwords</a>";
+  echo "<h1>Your passwords do not match!</h1> <br> <a href='create_account.php'>Try Again with Matching Passwords</h1>";
 
 }
 ?>
