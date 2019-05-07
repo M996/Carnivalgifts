@@ -39,7 +39,7 @@ if ($url != 'http://localhost/MilestoneProject/logon.php') {
 ?>
 <body>
   <div class="header-menu">
-      <a href="index.php" class="homepage-button"><img src="src/images/carnival-logo.png"></a>
+      <a href="logon.php" class="homepage-button"><img src="src/images/carnival-logo.png"></a>
     <div class="header-navbar">
       <a href="index.php" class="blue-nav">Home</a>
       <a href="create_account.php" class="blue-nav">Create Account</a>

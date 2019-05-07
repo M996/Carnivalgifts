@@ -15,18 +15,21 @@ if (isset($_POST['delete-id'])) {
   <title> ___'s Profile </title>
 </head>
 
-<div class="overview-page">
-  <div class="overview-advert">
+<div class="overview-page" id="overview-page">
+  <div class="overview-advert" id="overview-advert">
     <img src="src/images/Small_Advert1.png" class="small-advert1">
     <img src="src/images/Small_Advert1.png" class="small-advert1">
     <img src="src/images/Small_Advert1.png" class="small-advert1">
   </div>
 
   <?php
-if (isset($_REQUEST['ben-id'])) {
-  $currentID = $_REQUEST['ben-id'];
-
-echo $currentID;
+if (isset($_POST['ben-id'])) {
+  $currentID = $_POST['ben-id'];
+  $fname1 = $_POST['fname1'];
+  $lname1 = $_POST['lname1'];
+  $fname2 = $_POST['fname2'];
+  $lname2 = $_POST['lname2'];
+  $ben_id = $_POST['ben-id'];
 
   require 'config.php';
   $SQL_Search_Account = "SELECT cruise_num FROM cruise_order WHERE  beneficiaryID = '$currentID';";
@@ -49,10 +52,15 @@ echo $currentID;
     $roomnum_overview = $final_overview_display['room_num'];
     $city_overview = $final_overview_display['destinationCity'];
     $country_overview = $final_overview_display['destinationCountry'];
-    $cost_overview = $final_overview_display['cost'];
+
+    $SQL_Query_Amount = "SELECT amountNeeded FROM cruise_order WHERE beneficiaryID = $ben_id;";
+    $amount_needed_object = mysqli_query($db, $SQL_Query_Amount);
+    $amount_needed = mysqli_fetch_array($amount_needed_object);
+
+    $cost_overview = $amount_needed['amountNeeded'];
 
 
-    echo '<div class="overview-cruise-group">
+    echo '<div class="overview-cruise-group" id="overview-cruise-group">
       <a href="destination_select.php"> <img src="src/images/' . $picture_overview . '" class="overview-destination"></a>
       <h2 class="cruise-name">The ' . $cruise_name_overview . '</h2>
       <div class="overview-cruise-text">
@@ -60,7 +68,14 @@ echo $currentID;
         <h4 class="overview-text-info">Destination: ' . $city_overview . ', ' . $country_overview . '</h4>
         <h4 class="overview-text-info">Amount Due: $' . $cost_overview . '</h4>
       </div>
-      <a href="donate_form.php"<button type="button" class="shizzle">Donate</button></a>
+      <form class="small-form" method="post" action="donate_form.php">
+      <input style="display: none;" value="' . $fname1 .'" name="fname1">
+      <input style="display: none;" value="' . $lname1 .'" name="lname1">
+      <input style="display: none;" value="' . $fname2 .'" name="fname2">
+      <input style="display: none;" value="' . $lname2 .'" name="lname2">
+      <input style="display: none;" value="' . $ben_id .'" name="ben-id">
+      <button type="submit" class="shizzle">Donate</button>
+      </form>
       <div id="progress-bar-overview">
         <div id="progress-bar-fill-overview"></div>
       </div>
@@ -70,6 +85,17 @@ echo $currentID;
 } else {
   $currentID = $_SESSION['benID'];
 
+  include "config.php";
+  $SQL_Query_Current = "SELECT beneficiary_F_Name, beneficiary_L_Name, Spouse_F_Name, Spouse_L_Name FROM beneficiary WHERE beneficiaryID = $currentID;";
+  $names_object = mysqli_query($db, $SQL_Query_Current);
+  $names_array = mysqli_fetch_array($names_object);
+
+  $fname1 = $names_array['beneficiary_F_Name'];
+  $lname1 = $names_array['beneficiary_L_Name'];
+  $fname2 = $names_array['Spouse_F_Name'];
+  $lname2 = $names_array['Spouse_L_Name'];
+  $ben_id = $currentID;
+
 
   require 'config.php';
   $SQL_Search_Account = "SELECT cruise_num FROM cruise_order WHERE  beneficiaryID = '$currentID';";
@@ -92,10 +118,15 @@ echo $currentID;
     $roomnum_overview = $final_overview_display['room_num'];
     $city_overview = $final_overview_display['destinationCity'];
     $country_overview = $final_overview_display['destinationCountry'];
-    $cost_overview = $final_overview_display['cost'];
+
+    $SQL_Query_Amount = "SELECT amountNeeded FROM cruise_order WHERE beneficiaryID = $currentID;";
+    $amount_needed_object = mysqli_query($db, $SQL_Query_Amount);
+    $amount_needed = mysqli_fetch_array($amount_needed_object);
+
+    $cost_overview = $amount_needed['amountNeeded'];
 
 
-    echo '<div class="overview-cruise-group">
+    echo '<div class="overview-cruise-group" id="overview-cruise-group">
       <a href="destination_select.php"> <img src="src/images/' . $picture_overview . '" class="overview-destination"></a>
       <h2 class="cruise-name">The ' . $cruise_name_overview . '</h2>
       <div class="overview-cruise-text">
@@ -103,14 +134,21 @@ echo $currentID;
         <h4 class="overview-text-info">Destination: ' . $city_overview . ', ' . $country_overview . '</h4>
         <h4 class="overview-text-info">Amount Due: $' . $cost_overview . '</h4>
       </div>
-      <a href="donate_form.php"<button type="button" class="shizzle">Donate</button></a>
+      <form class="small-form" method="post" action="donate_form.php">
+      <input style="display: none;" value="' . $fname1 .'" name="fname1">
+      <input style="display: none;" value="' . $lname1 .'" name="lname1">
+      <input style="display: none;" value="' . $fname2 .'" name="fname2">
+      <input style="display: none;" value="' . $lname2 .'" name="lname2">
+      <input style="display: none;" value="' . $ben_id .'" name="ben-id">
+      <button type="submit" class="shizzle">Donate</button>
+      </form>
       <div id="progress-bar-overview">
         <div id="progress-bar-fill-overview"></div>
       </div>
     </div>';
     } else {
 
-      echo '<div class="overview-cruise-group">
+      echo '<div class="overview-cruise-group" id="overview-cruise-group">
         <a href="destination_select.php"> <img src="src/images/empty.jpg" class="overview-destination"></a>
         <h2 class="cruise-name">No Cruise has been Selected Yet. Click the image above to select a Cruise</h2>
         <div class="overview-cruise-text">
@@ -123,7 +161,7 @@ echo $currentID;
     }
   }   ?>
 
-    <div class="overview-items">
+    <div class="overview-items" id="overview-items">
       <?php
 
       if (isset($_REQUEST['ben-id'])) {
@@ -210,12 +248,12 @@ echo $currentID;
       </div>'; }
       echo '<div class="item-select-div">
         <a href="item_select.php" class="add-items-link"><button type="button" class="item-select-button">Add Items</button>
-        <p class="add-items-additional-text">Add more items for the Destination and/or Cruise</p></a>
+        <p class="add-items-additional-text" id="add-items-additional-text">Add more items for the Destination and/or Cruise</p></a>
       </div>';
   } else {
     echo '<div class="item-select-div">
             <a href="item_select.php" class="add-items-link"><button type="button" class="item-select-button">Add Items</button>
-            <p class="add-items-additional-text">Add more items for the Destination and/or Cruise</p></a>
+            <p class="add-items-additional-text" id="add-items-additional-text">Add more items for the Destination and/or Cruise</p></a>
           </div>'; }
         }
     ?>

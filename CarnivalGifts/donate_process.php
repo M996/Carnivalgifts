@@ -43,18 +43,18 @@ if ($row_count == 1){
 
 $new_amount = $total_amount - $amount;
 
-echo $new_amount;
-
   $SQL_Add_Payment = "UPDATE cruise_order SET amountNeeded = $new_amount WHERE order_id = '$order_id';";
   mysqli_query($db, $SQL_Add_Payment);
 
 
-  echo "<h1>Thank you for donating $$amount to this vacation fund!</h1> <br> <a href='index.php'>Click Here to return Home</a>";
+  echo "<h1>Thank you for donating $$amount to this vacation fund!</h1> <br> <a href='index.php'>Click Here to return Home</a> <br> <br> <h4>A Recepit has been sent to your email inbox!</h4>";
+
+  mail("mitchell.suchner@cornerstone.edu", "CarnivalGifts Receipt", "Thank you for donating $$amount through CarnivalGifts!", "From:Admin@CarnivalGifts.com",);
 
 
 
 } else {
-  echo "Something went wrong. This user is scheduled for multiple trips. Ability to choose which trip to donate to has not yet been added.";
+  echo "<h2>Something went wrong. This user is scheduled for multiple trips. Ability to choose which trip to donate to has not yet been added.</h2> <a href='index.php'>Click Here to return Home</a>";
 }
 
 

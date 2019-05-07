@@ -2,7 +2,8 @@
 
 <?php // if the user is coming from the overview page or the item select page and they already have a cruise selected under their account, we must erase that cruise upon their entry to this page, thus allowing them to choose the same cruise or a new cruise.
 
-  if (isset($_SESSION['benID'])) {
+
+  if (isset($_SESSION['benID']) && !isset($_POST['Replace'])) {
     $benID = $_SESSION['benID'];
     require 'config.php';
     $SQL_Query_Check = "SELECT order_id, cruise_num FROM cruise_order WHERE beneficiaryID = $benID;";

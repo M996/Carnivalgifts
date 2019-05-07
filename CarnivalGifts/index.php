@@ -19,51 +19,51 @@
     <div class="homepage-destinations-div">
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
     </div>
     <div class="homepage-destinations-div">
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Cebu</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
       <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
     </div>
     <div class="homepage-destinations-div">
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
       <div class="seperation-div-home">
         <h2 class="homepage-destination-text">Bora Bora</h2>
-        <a href="create_account.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
+        <a href="go_between.php"> <img src="src/images/Destination1.jpg" class="homepage-destination-img"></a>
         <div class="text-container-home"><p class="destination-negative-margin">Come an join us on a wonderful cruise to Bora Bora and other fantastic locations!</p></div>
       </div>
     </div>

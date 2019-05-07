@@ -57,7 +57,7 @@ if (isset($_REQUEST['item-ID'])) {
 
   echo '<div class="item-info-header">
     <h1 class="items-available-header">Items Available for (' . $city_items .'):</h1>
-     <a href="destination_select.php" class="city-list-items"><button>View Another City</button></a>
+     <a href="go_between.php" class="city-list-items"><button>View Another City</button></a>
     </div>
     <div class="item-list-container">';
 

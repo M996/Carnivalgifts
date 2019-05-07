@@ -57,6 +57,10 @@
                  <button type="submit" method="post" class="shizzle" style="margin-bottom: 8px;">Make Donation</button>
                 </form>
                 <form method="post" action="overview.php">
+                  <input style="display: none;" value="' . $fname1 .'" name="fname1">
+                  <input style="display: none;" value="' . $lname1 .'" name="lname1">
+                  <input style="display: none;" value="' . $fname2 .'" name="fname2">
+                  <input style="display: none;" value="' . $lname2 .'" name="lname2">
                   <input style="display: none;" value="' . $new_ben_id .'" name="ben-id">
                  <button type="submit" method="post" class="shizzle">View This Trip</button>
                 </form>

@@ -3,6 +3,24 @@
   display: flex;
 }
 
+@media screen and (max-width: 720px) {
+  #overview-page {
+    flex-direction: column;
+  }
+  #overview-advert {
+    display: none;
+  }
+  #overview-cruise-group {
+    width: 100%;
+  }
+  #overview-items {
+    width: 100%;
+  }
+  #add-items-additional-text {
+    display: none;
+  }
+}
+
 .overview-advert {
   display: flex;
   flex-direction: column;
@@ -20,9 +38,9 @@
 }
 
 .overview-destination {
-  width: 80%;
-  min-width: 140px;
-  max-width: 360px;
+  width: 90%;
+  min-width: 200px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -46,9 +64,12 @@
 }
 
 .overview-items {
-  display: block;
+  display: flex;
   width: 30%;
   margin-top: 8%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-items {
@@ -76,8 +97,8 @@
 .overview-item-image {
   width: 90%;
   height: auto;
-  min-width:140px;
-  max-width: 400px;
+  min-width:100px;
+  max-width: 175px;
   margin-bottom: 10%;
 }
 
@@ -87,6 +108,7 @@
   align-items: center;
   flex-direction: column;
   margin: 20%;
+  min-width: 200px;
 }
 
 .item-select-button {
