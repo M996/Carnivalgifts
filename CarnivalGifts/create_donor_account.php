@@ -1,5 +1,10 @@
 <?php include 'header.php' ?>
 
+
+<!--PLEASE Note: This page is left in the project because it was originally intended to be used when creating a Donor Account which would be seperate from the main account of the user,
+ but I decided that Donor Accounts would be on overeach of my design and everything should be fit into a 'normal' user account for multiple reasons, one of them being ease of use and convenience for the user,
+ another being that it added unneccesary database complexity.
+ -->
 <head>
 <title> Create A Donor Account </title>
 </head>
